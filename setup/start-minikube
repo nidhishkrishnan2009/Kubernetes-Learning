@@ -1,0 +1,5 @@
+Steps:
+# start docker:
+1. systemctl start docker
+# Start Minikube
+2. minikube start

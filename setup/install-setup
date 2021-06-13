@@ -1,0 +1,32 @@
+Prerequisite:
+install snapd:
+https://github.com/nidhishkrishnan2009/Linux-Learning/blob/main/centos/install-snapd
+
+Steps:
+# Install Kubectl
+1. snap install kubectl --classic
+
+# To verify the version:
+kubectl version --client
+
+# verify kubectl installation
+kubectl cluster-info
+kubectl cluster-info dump
+
+# Enable shell autocompletion:
+Steps:
+1. yum install bash-completions
+
+2. source /usr/share/bash-completion/bash_completion => Add this in ~/.bash_profile
+
+3. source ~/.bash_profile
+
+# Source the completion script in your ~/.bash_profile file:
+4. echo 'source <(kubectl completion bash)' >>~/.bash_profile
+
+# Add the completion script to the /etc/bash_completion.d directory:
+5. kubectl completion bash >/etc/bash_completion.d/kubectl
+
+# If you have an alias for kubectl, you can extend shell completion to work with that alias:
+6. echo 'alias k=kubectl' >>~/.bash_profile
+   echo 'complete -F __start_kubectl k' >>~/.bash_profile
