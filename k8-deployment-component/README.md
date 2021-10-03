@@ -1,5 +1,3 @@
-# Kubernetes-Learning
-
 Layers of Abstraction:
 
 - Deployment manages replica set

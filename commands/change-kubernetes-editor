@@ -1,0 +1,4 @@
+Steps:
+1. vim ~/.bash_profile
+2. export KUBE_EDITOR="atom -w"
+3. source ~/.bash_profile

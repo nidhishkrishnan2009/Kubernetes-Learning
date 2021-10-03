@@ -1,0 +1,22 @@
+# To get pods
+kubectl get po
+
+# To describe pods
+kubectl describe po <pod-name>
+
+Type    Reason     Age    From               Message
+----    ------     ----   ----               -------
+Normal  Scheduled  3m21s  default-scheduler  Successfully assigned default/mongo-deploy-654d854584-hvt8z to minikube
+Normal  Pulling    3m19s  kubelet            Pulling image "mongo"
+Normal  Pulled     115s   kubelet            Successfully pulled image "mongo" in 1m24.197385042s
+Normal  Created    115s   kubelet            Created container mongo
+Normal  Started    114s   kubelet            Started container mongo
+
+Message helps to track the status of container creation.
+
+# To see the logs for debugging error:
+kubectl logs <pod-name>
+
+# For logging into the pod
+kubectl exec -it <pod-name> -- bin/bash
+ 

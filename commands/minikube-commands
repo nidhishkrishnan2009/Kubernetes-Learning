@@ -1,0 +1,2 @@
+# To check status of Minikube
+minikube status

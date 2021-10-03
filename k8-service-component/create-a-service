@@ -1,0 +1,25 @@
+Steps:
+1. kubectl apply -f k8-nginx-service.yaml
+# To verify service is created
+2. kubectl get svc
+3. kubectl describe service <service-name>
+
+Name:              nginx-service
+Namespace:         default
+Labels:            <none>
+Annotations:       <none>
+Selector:          app=nginx
+Type:              ClusterIP
+IP Families:       <none>
+IP:                10.106.69.126
+IPs:               10.106.69.126
+Port:              <unset>  8000/TCP
+TargetPort:        8100/TCP
+Endpoints:         172.17.0.4:8100,172.17.0.6:8100
+Session Affinity:  None
+Events:            <none>
+
+Endpoints is the ip address of the pods.
+
+=> How we confirm the ip address of the pods
+kubectl get po -o wide

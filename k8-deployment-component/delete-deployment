@@ -1,0 +1,10 @@
+# Deleting the deployment will cause all of its pods be deleted.
+kubectl delete deployment <deployment-name>
+
+# deleting deployments will delete:
+1. deployment
+2. pods
+3. replica set
+
+# Delete deployment using configuration file.
+kubectl delete -f deploy-config.yaml

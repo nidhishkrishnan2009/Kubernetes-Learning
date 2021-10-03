@@ -1,0 +1,21 @@
+template:
+  metadata:
+    labels:
+      app: nginx
+  spec:
+    containers:
+    - name: nginx
+      image: nginx
+      ports:
+      - containerPort: 8100
+
+The above section the deploy-config.yml is the template for pod creation.
+
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+    ports:
+    - containerPort: 8100
+
+  The above section is considered as the blue print of the pod.

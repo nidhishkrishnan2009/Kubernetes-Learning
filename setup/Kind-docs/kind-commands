@@ -1,0 +1,30 @@
+# To create cluster with default name
+./kind create cluster
+
+# To create cluster with given name
+kind create cluster --name nidish-cluster
+
+# To List clusters
+./kind get clusters
+
+# To interact with specific cluster
+kubectl cluster-info --context kind-nidish-cluster
+or
+kubectl config use-context kind-nidish-cluster
+
+# To Load image to a cluster
+
+# To delete a cluster
+kind delete cluster
+
+# To delete cluster by name
+kind delete cluster --name multinode-cluster
+
+# To create one master node/control plane plus 2 worker node clusters
+./kind create cluster --config kind-multinode-cluster.yaml --name multinode-cluster
+
+# To create namespace
+kubectl create namespace aznamespace
+
+# Switch to a namespace
+kubectl config set-context --current --namespace=naijanamespace

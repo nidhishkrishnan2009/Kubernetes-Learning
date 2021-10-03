@@ -1,0 +1,5 @@
+# status of deployment is stored in etcd of master node.
+To get the status:
+kubectl get deployment -o yaml
+to write the result in a file
+kubectl get deployment -o yaml > nginx-deploy-status.yaml

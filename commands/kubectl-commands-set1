@@ -1,0 +1,5 @@
+# To get services
+kubectl get services
+
+# help manual for kubectl create components
+kubectl create -h

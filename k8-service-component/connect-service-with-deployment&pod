@@ -1,0 +1,12 @@
+Service connect with deployment pods labels using the selector:
+spec:
+  selector:
+    app: nginx
+
+    ports:
+    - port: 8000
+      targetPort: 8100
+
+port:8000 is where the service itself is running
+targetPort: 8100 is the port where pods are listening. So this should match
+the container port defined in the deployment configuration.

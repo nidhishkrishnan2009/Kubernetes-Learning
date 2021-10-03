@@ -9,8 +9,6 @@ Otherwise:
 
 Otherwise:
 1. kubectl delete node --all
-2. for service in kube-apiserver kube-controller-manager kubectl kubelet kube-proxy kube-scheduler; do
-      systemctl stop $service
-  done
+2. for service in kube-apiserver kube-controller-manager kubectl kubelet kube-proxy kube-scheduler; do systemctl stop $service done;
 
 3. yum -y remove kubernetes

@@ -1,0 +1,7 @@
+- in prod ready apps , we use config file to manage kuberntes cluster.
+# How to execute the confg file
+kubectl apply -f <config-file-name>.yaml
+# here -f stands for file.
+
+The above command will create a deployment fir the first time and then it will
+update the existing deployment.

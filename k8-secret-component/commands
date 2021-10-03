@@ -1,0 +1,5 @@
+# view secrets
+kubectl get secrets
+
+# Delete secret
+kubectl delete -f <secret-file>.yaml

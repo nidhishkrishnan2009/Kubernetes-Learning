@@ -1,0 +1,20 @@
+=> Meta data part contains the labels
+metadata:
+  name: nginx-deployment
+  labels:
+    app: nginx
+=> Spec part contains the Selectors
+
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+    ports:
+    - containerPort: 8100
+
+=> In Metadata part we define labels of components like deployment & pod
+
+=> Selector connects 2 labels
+
+Selector matches the components using matchLabels.
+Labels can any key-value pair. Here it is app: nginx

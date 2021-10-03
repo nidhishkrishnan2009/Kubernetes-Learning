@@ -1,0 +1,22 @@
+# This will pull the latest nginx image from docker hub and deploy it
+kubectl create deployment nginx-deploy --image=nginx
+
+# To verify
+kubectl get deployments
+
+Notes:
+- Deployment is the blueprint of pod which contains info
+about name and docker image to be used.
+- Replica set is a layer between deployment and pods.
+This is automatically managed by kubernetes itself.
+
+# To verify the Replica set
+kubectl get rs
+
+# To change the version of image in deployments
+1. kubectl edit deployments <deployment name>
+2. find the image and add version.
+ for e,g: image: nginx:1.16
+3. verify kubectl get po
+  result would be old pod will get terminated
+  and new pod gets started automatically.

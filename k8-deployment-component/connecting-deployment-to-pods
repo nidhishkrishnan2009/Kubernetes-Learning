@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+  labels:
+    app: nginx
+
+=> The above one is deployment label
+
+template:
+  metadata:
+    labels:
+      app: nginx
+
+=> The above one is pod label
+
+deployments and pods are connected by the below selector
+
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: nginx
